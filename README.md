@@ -1,4 +1,7 @@
-# customers project
+Customer microservice project
+
+see design.md for details.
+
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
