@@ -1,4 +1,4 @@
-#Get Started
+# Get Started
 While I haven't tested this on a cold system, I think it will work out of the box if you do the following:
 
 1. Install Java 11; I'm using java 11.0.3 from OpenJDK
@@ -20,7 +20,7 @@ Some things to try:
    * get ```http://localhost:8080/servicecases/0```
 	* store a couple of filters and re-use them.
 
-#Requirements
+# Requirements
 ## Setting
 We are building a new Customer Relationship Management (CRM) System with a layer of Artificial Intelligence powered pluggable components. 
 
@@ -143,7 +143,7 @@ That is, how much runway do we have? A fully-fleshed-out service might take a we
 * The unit testing framework should also support live full-stack tests, to simplify the deployment pipeline and 
   reduce the required skill set for developers.
 
-#Design
+# Design
 Since I'm doing this in the context of an interview, a full decision analysis, which would require a week or 
   so of effort, isn't appropriate. In the "real world", I would survey the market for tools and emerging standards,
   build a list of evaluation criteria, both required and desired, and evaluate options against those criteria using
@@ -290,3 +290,6 @@ edit: <https://tinyurl.com/108eilbu>
     * a pipeline
     * metrics & logging
     * a real authentication and authorization subsystem
+* the data models are stubs and need some real analysis
+* the default error handling is still in place; this exposes a lot of internal detail inappropriately.
+

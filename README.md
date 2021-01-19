@@ -1,4 +1,4 @@
-Customer microservice project
+# Customer Microservice Project
 
 see design.md for details.
 
