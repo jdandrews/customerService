@@ -46,9 +46,3 @@ You can then execute your native executable with: `./build/customers-1.0.0-runne
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
 
-# RESTEasy JSON serialisation using Jackson
-
-<p>This example demonstrate RESTEasy JSON serialisation by letting you list, add and remove quark types from a list.</p>
-<p><b>Quarked!</b></p>
-
-Guide: https://quarkus.io/guides/rest-json
