@@ -257,6 +257,11 @@ straightforward, scriptable activity. Such a datastore allows us to query for an
 ID to retrieve the full record. Integrated indices such as you'd get on a relational database or with an 
 index in an object datastore are less flexible and more expensive to implement.
 
+For CRM applications, a full-text search of customer records might be desirable. Assuming 10M records/tenant, 
+~1kB/record, and 10B words, we would have to index about 1G records per tenant to index every word. Apache 
+Lucene has a limit of about 2.1 billion records per index (2G), so that it seems possible to do this with 
+existing off-the-shelf technologies.
+
 Since the bulk of the content is not indexed, and the key/value store emits an object ID, the bulk Customer
 store can be an object store such as AWS's DynamoDB, Mongo, GSC's Datastore, and so on. A small number of
 indices (e.g. various IDs) can be directly indexed.
