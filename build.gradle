@@ -15,12 +15,26 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy'
     implementation 'io.quarkus:quarkus-elytron-security-properties-file'
 
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.1'
+    // https://mvnrepository.com/artifact/org.antlr/stringtemplate
+    implementation group: 'org.antlr', name: 'stringtemplate', version: '4.0.2'
+    // https://mvnrepository.com/artifact/software.amazon.awssdk/sqs
+    implementation group: 'software.amazon.awssdk', name: 'sqs', version: '2.16.11'
+    // https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java
+    implementation('com.mashape.unirest:unirest-java:1.4.9') {
+        // we're getting these from Amazon's SDK, and later versions, too
+        exclude group:'org.apache.httpcomponents', module:'httpclient'
+        exclude group:'org.apache.httpcomponents', module:'httpcore'
+    }
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
     testImplementation 'io.quarkus:quarkus-junit5-mockito'
 }
 
-group 'org.jrandrews.liveperson'
+group 'org.jrandrews.liferaft'
 version '1.0.0'
 
 java {
